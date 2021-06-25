@@ -1,0 +1,39 @@
+/**
+PAUSING ADDED!
+*/
+{{
+    
+println("watch till the end, \njust trust me");
+
+//Change these!
+var Variable1 = -149;
+var Variable2 = 15;
+var Variable3 = 3475;
+var Variable4 = 0.1;
+var Variable5 = 0.1;
+var Variable6 = 11;
+var Variable7 = 2511;
+
+colorMode(HSB);
+background(255);
+translate(204, 200);
+ellipseMode(CENTER);
+strokeWeight(0.5);
+noStroke();
+
+draw = function() {
+    rotate(frameCount*Variable3);
+    fill(frameCount*Variable6%255, 255, 255);
+    rect((frameCount%Variable7)*Variable4, (frameCount%Variable7)*Variable5, Variable2, Variable2, Variable1);
+};
+
+mouseReleased = function(){
+    if(mouseX<200){
+        noLoop();
+    }
+    if(mouseX>200){
+        loop();
+    }
+};
+}}
+
